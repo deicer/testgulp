@@ -1,0 +1,11 @@
+body {
+  background-color: white;
+  color: red;
+  font-size: 20px;
+}
+body_title {
+  font-size: 30px;
+}
+body_content {
+  background-color: red;
+}
