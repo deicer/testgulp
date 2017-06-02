@@ -44,10 +44,9 @@ gulp.task('browserSync', function() {
 // Задача "LESS". Запускается командой "gulp less"
 
 gulp.task('css', function () {
-    return gulp.src('source/less/**/*.less')
-        .pipe(less({
-            paths: [path.join(__dirname, 'less', 'includes')]
-        }))
+    return gulp.src('source/less/style.less')
+        .pipe(less())
+        .pipe(concat('main.css'))
         .pipe(gulp.dest('public/css'))
         .on('error', gutil.log)
         .pipe(reload({stream:true}));
